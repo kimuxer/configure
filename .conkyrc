@@ -8,11 +8,10 @@ double_buffer yes
 own_window  yes
 own_window_transparent no
 own_window_type normal
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager 
-
+own_window_hints sticky,skip_taskbar,skip_pager,undecorate
 #borders
 draw_borders no
-border_margin 1
+#border_margin 1
 
 #shades
 draw_shades no
@@ -34,7 +33,8 @@ color2 FFFFFF
 color3 cccccc
 color4 cccccc
 #default_shade_color 000000
-own_window_colour 393939
+own_window_colour 333333
+#393939
 
 #font
 use_xft yes
@@ -43,6 +43,7 @@ xftfont LiHeiPro:pixelsize=11
 use_spacer none
 minimum_size 1440 0
 TEXT
-   kernel: ${color2}${kernel} (${exec uname -m})      ${color}time: ${color2}${uptime_short}   ${color3}| |   ${color}cpu1: ${color2}${cpu cpu1}%   ${color}${cpugraph cpu1 8,50 FFFFFF FFFFFF}     ${color}cpu2: ${color2}${cpu cpu2}%   ${color}${cpugraph cpu2 8,50 FFFFFF FFFFFF}   ${color3}| |   ${color}ram: ${color2}$memperc% ${color} ${memgraph 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}up: ${color2}${upspeedf wlan0} kb/s ${color}${upspeedgraph wlan0 8,50 FFFFFF FFFFFF}      ${color}down: ${color2}${downspeedf wlan0} kb/s ${color}${downspeedgraph wlan0 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}cpu: ${color2}${acpitemp}°C  ${color}gpu: ${color2}${execpi 10 nvidia-settings -q GPUCoreTemp | grep COMPNAME | sed s/\ \ Attribute\ \'GPUCoreTemp\'\ \(COMPNAME:0.0\):\ // | cut -b1-2 ;}°C ${goto 1128}${color2} ${time %d} ${time %B} ${time %Y}, ${time %A} ${color3}  ${color2}${time %H}:${time %M} 
+   kernel: ${color2}${kernel} (${exec uname -m})      ${color}time: ${color2}${uptime_short}   ${color3}| |   ${color}cpu1: ${color2}${cpu cpu1}%   ${color}${cpugraph cpu1 8,50 FFFFFF FFFFFF}     ${color}cpu2: ${color2}${cpu cpu2}%   ${color}${cpugraph cpu2 8,50 FFFFFF FFFFFF}   ${color3}| |   ${color}ram: ${color2}$memperc% ${color} ${memgraph 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}up: ${color2}${upspeedf wlan0} kb/s ${color}${upspeedgraph wlan0 8,50 FFFFFF FFFFFF}      ${color}down: ${color2}${downspeedf wlan0} kb/s ${color}${downspeedgraph wlan0 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}cpu: ${color2}${execi 30 sensors | grep 'Core 1' | cut -c16-17}掳  ${color}gpu: ${color2}${execpi 10 nvidia-settings -q GPUCoreTemp | grep MyBox | sed s/\ \ Attribute\ \'GPUCoreTemp\'\ \(MyBox:0.0\):\ // | cut -b1-2 ;}掳   | |   Signal: ${wireless_link_qual wlan0}% ${goto 1330}${color2} ${time %d} ${time %B} ${time %Y}, ${time %A} ${color3}
+
  
 
