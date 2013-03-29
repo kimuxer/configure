@@ -1,0 +1,48 @@
+#SHIKI-CONKY BY SARAI B. 2009 (GPL)
+#PLEASE PROVIDE CREDIT WHEN SHARING :)
+
+#avoid flicker
+double_buffer yes
+
+#own window to run simultanious 2 or more conkys
+own_window  yes
+own_window_transparent no
+own_window_type normal
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager 
+
+#borders
+draw_borders no
+border_margin 1
+
+#shades
+draw_shades no
+
+#position
+gap_x 0
+gap_y 4
+alignment top_left
+
+#behaviour
+update_interval 1
+
+#colour
+default_color CCCCCC #676767
+color2 FFFFFF
+#color3 f6830f
+#color4 fdc065
+#color2 9966FF
+color3 cccccc
+color4 cccccc
+#default_shade_color 000000
+own_window_colour 393939
+
+#font
+use_xft yes
+xftfont LiHeiPro:pixelsize=11
+#to prevent window from moving
+use_spacer none
+minimum_size 1440 0
+TEXT
+   kernel: ${color2}${kernel} (${exec uname -m})      ${color}time: ${color2}${uptime_short}   ${color3}| |   ${color}cpu1: ${color2}${cpu cpu1}%   ${color}${cpugraph cpu1 8,50 FFFFFF FFFFFF}     ${color}cpu2: ${color2}${cpu cpu2}%   ${color}${cpugraph cpu2 8,50 FFFFFF FFFFFF}   ${color3}| |   ${color}ram: ${color2}$memperc% ${color} ${memgraph 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}up: ${color2}${upspeedf wlan0} kb/s ${color}${upspeedgraph wlan0 8,50 FFFFFF FFFFFF}      ${color}down: ${color2}${downspeedf wlan0} kb/s ${color}${downspeedgraph wlan0 8,50 FFFFFF FFFFFF}   ${color4}| |   ${color}cpu: ${color2}${acpitemp}°C  ${color}gpu: ${color2}${execpi 10 nvidia-settings -q GPUCoreTemp | grep COMPNAME | sed s/\ \ Attribute\ \'GPUCoreTemp\'\ \(COMPNAME:0.0\):\ // | cut -b1-2 ;}°C ${goto 1128}${color2} ${time %d} ${time %B} ${time %Y}, ${time %A} ${color3}  ${color2}${time %H}:${time %M} 
+ 
+
