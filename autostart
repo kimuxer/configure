@@ -1,24 +1,29 @@
-#
-# These things are run when an Openbox X Session is started.
-# You may place a similar script in $HOME/.config/openbox/autostart
-# to run user-specific things.
-#
+#!/bin/bash
+#.config/openbox/autostart.sh
 
-# If you want to use GNOME config tools...
-#
-#if test -x /usr/libexec/gnome-settings-daemon >/dev/null; then
-#  /usr/libexec/gnome-settings-daemon &
-#elif which gnome-settings-daemon >/dev/null; then
-#  gnome-settings-daemon &
-#fi
+# This shell script is run before Openbox launches.
+# Environment variables set here are passed to the Openbox session.
+#####ERROR#####compton -cCf -r5 -o.65 -l-4 -t-4 -D1 -z 
+#compton -cCf -I 0.065 -O 0.065 -D 3 -m 0.9 -G -b -i 0.6 -e 0.75 -z 
+#compton -cf -D 3 -m 0.9 -G -b -i 0.6 -e 0.75 -z 
+compton -b --config ~/.compton.conf
 
-# If you want to use XFCE config tools...
-#
-#xfce-mcs-manager &
-compton -cCf -I 0.065 -O 0.065 -D 3 -G -b -i 0.6 -e 0.75 -z --shadow-ignore-shaped
-feh --bg-scale $HOME/.wallpaper/1.jpg &
-tint2 &
-urxvtd -o -f -q &
-sleep 3 && conky &
- 
+# URxvt server
+if which urxvtd > /dev/null; then
+        urxvtd -o -q -f &
+fi
+# tint2
+if which tint2 > /dev/null; then
+        tint2 &
+fi
+if which conky > /dev/null; then
+        (sleep 3 && conky) &
+fi
+# set the fcitx
+if which fcitx > /dev/null; then
+        (sleep 2 && fcitx) &
+fi
+
+#eval 'cat ~/.fehbg' &
+feh --no-xinerama --bg-scale ~/.wallpaper/5.jpg &
 
