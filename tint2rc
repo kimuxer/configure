@@ -4,44 +4,36 @@
 
 # Background definitions
 # ID 1
-rounded = 7
-border_width = 2
-background_color = #000000 60
+rounded = 0
+border_width = 1
+background_color = #000000 80
 border_color = #FFFFFF 16
 
 # ID 2
-rounded = 5
+rounded = 0
 border_width = 0
 background_color = #FFFFFF 40
 border_color = #FFFFFF 48
 
 # ID 3
-rounded = 5
+rounded = 0
 border_width = 0
 background_color = #FFFFFF 16
-#border_color = #FFFFFF 68
 border_color = #FFFFFF 80
 # Panel
 panel_monitor = all
-panel_position = bottom center horizontal
-panel_size = 99% 23
+panel_position = bottom center
+panel_size = 100% 22
 panel_margin = 0 0
-panel_padding = 7 0 7
+panel_padding = 7 0 2
 panel_dock = 0
-wm_menu = 0
+wm_menu = 1
 panel_layer = top
 panel_background_id = 1
 
-# Panel Autohide
-autohide = 0
-autohide_show_timeout = 0.3
-autohide_hide_timeout = 2
-autohide_height = 2
-strut_policy = follow_size
-
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 2 3 2
+taskbar_padding = 1 1 2
 taskbar_background_id = 0
 taskbar_active_background_id = 0
 
@@ -51,7 +43,7 @@ task_icon = 0
 task_text = 1
 task_centered = 1
 task_maximum_size = 140 35
-task_padding = 6 2
+task_padding = 1 2
 task_background_id = 3
 task_active_background_id = 2
 task_urgent_background_id = 2
@@ -64,7 +56,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = LiHeiPro 9
+task_font = apple bold 8
 task_font_color = #FFFFFF 68
 task_active_font_color = #FFFFFF 83
 task_urgent_font_color = #FFFFFF 83
@@ -81,13 +73,13 @@ systray_icon_asb = 70 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = sans 8
+time1_font = apple bold 9
 #time2_format = %A %d %B
 #time2_font = sans 5
-#clock_font_color = #FFFFFF 74
-#clock_padding = 1 0
-#clock_background_id = 0
-#clock_rclick_command = orage
+clock_font_color = #FFFFFF 74
+clock_padding = 1 0
+clock_background_id = 0
+clock_rclick_command = orage
 
 # Tooltips
 tooltip = 0
@@ -95,7 +87,7 @@ tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 1
-tooltip_font = sans 10
+tooltip_font = LiHeiPro bold 8
 tooltip_font_color = #000000 80
 
 # Mouse
@@ -103,6 +95,4 @@ mouse_middle = none
 mouse_right = close
 mouse_scroll_up = toggle
 mouse_scroll_down = iconify
-
 # End of config
- 
