@@ -4,42 +4,48 @@ Xft.antialias:	True
 Xft.hinting:	Full
 Xft.rgba:       rgb
 !-*-}
-
 !-*-{字体设置
-URxvt.font:xft:monaco:pixelsize=12,xft:LiHeiPro:pixelsize=12
-URxvt.boldFont:xft:monaco:bold:pixelsize=12,xft:LiHeiPro:bold:pixelsize=12
-URxvt.italicFont:xft:monaco:pixelsize=12,xft:LiHeiPro:pixelsize=12
-URxvt.boldItalicFont:xft:monaco:bold:pixelsize=12,xft:LiHeiPro:bold:pixelsize=12
+URxvt.font:             xft:monaco:size=10,xft:apple:size=10
+URxvt.boldFont:         xft:monaco:bold:size=10,xft:apple:bold:size=10
+URxvt.italicFont:       xft:monaco:size=10,xft:apple:size=10
+URxvt.boldItalicFont:   xft:monaco:bold:size=10,xft:apple:bold:size=10
 !-*-}
+
 !-*-{默认设置
-URxvt.termName: 		rxvt-unicode-256color
-URxvt.depth: 			32
-URxvt.buffered:			True
-URxvt.jumpScroll: 		True 
-URxvt.geometry:			80x40
-URxvt.scrollBar:		False
-URxvt.scrollTtyOutput:	False
-Urxvt.scrollTtyKeypress:True
-URxvt.scrollWithBuffer: True
-URxvt.internalBorder:   0 
-URxvt.externalBorder:   0
-URxvt.saveLines:		10240
-URxvt.borderLess: 		True
-URxvt.cursorBlink: 		True
-URxvt.perl-ext-common: 	        default,matcher
-URxvt.transparent: 		True
-URxvt.shading: 			55
-URxvt.preeditType: 		OverTheSpot
-!URxvt.inputMethod:		fcitx	
-!URxvt.urlLauncher: 	        chromium
-!URxvt.iconFile:
-!-*-}
+URxvt.termName:                 rxvt-unicode-256color
+URxvt.depth:                    32
+URxvt.buffered:                 True
+URxvt.jumpScroll:               True 
+URxvt.geometry:                 80x25+100+100
+
+URxvt.scrollBar:                False
+URxvt.scrollTtyOutput:          False
+Urxvt.scrollTtyKeypress:        True
+URxvt.scrollWithBuffer:         False
+URxvt.scrollstyle:              plain
+Urxvt.secondaryScroll:          True
+URxvt.internalBorder:           1
+URxvt.saveLines:                8192
+URxvt.borderLess:               True
+URxvt.cursorBlink:              False
+URxvt.perl-ext-common:          default,matcher,url-select,keyboard-select
+URxvt.matcher.button:           1
+URxtt.transparent:              True
+URxvt.shading:                  80
+URxvt.preeditType:              OverTheSpot
+URxvt.inputMethod:              fcitx   
+URxvt.urlLauncher:              chromium
+URxvt.borderColor:              #CCCCCC
+URxvt.thickness:                0
+URxvt.inheritPixmap:            False
+
+!-*-}URxvt.keysym.M-u:          perl:url-select:select_next
+URxvt.keysym.M-Escape:          perl:keyboard-select:activate
+tRxvt.keysym.M-s:               perl:keyboard-select:search
 
 !-*-{颜色设置
-!URxvt.background: 	rgba:0000/0000/0000/aaaa
-!URxvt.foreground: 	rgba:ffff/ffff/ffff/aaaa
 URxvt.foreground:  	white
-URxvt.background:  	[70]#000000
+URxvt.background:  	[80]#000000
 URxvt.fading: 		25
 !URxvt.fadeColor:	#A9A9A9
 
