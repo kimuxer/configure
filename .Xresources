@@ -39,7 +39,8 @@ URxvt.borderColor:              #CCCCCC
 URxvt.thickness:                0
 URxvt.inheritPixmap:            False
 
-!-*-}URxvt.keysym.M-u:          perl:url-select:select_next
+!-*-}
+URxvt.keysym.M-u:               perl:url-select:select_next
 URxvt.keysym.M-Escape:          perl:keyboard-select:activate
 tRxvt.keysym.M-s:               perl:keyboard-select:search
 
