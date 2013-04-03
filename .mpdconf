@@ -1,0 +1,57 @@
+###############################################################################
+# Author: kimux
+# Email: kimuxer at gmail dot com
+# Description: musicpd configuration
+# Created: Api 03, 2013 13:28
+# Last Change: 
+# See also: https://wiki.archlinux.org/index.php/Mpd
+###############################################################################
+
+# Files and directories #######################################################
+#
+# Note: all music is always located in "~/Music/" directory.
+#       Usually it's just symbloic link to physical music directory.
+#       Musicpd related files is located in "~/.mpd/" directory
+#
+#       * Take care in Windows *: 
+#                 * junction is a choosed utiltiy to create symbolic
+#                    link in ntfs formats.
+#                 * maybe it should specify the explicit path in
+#                   .mpdconf for windows version musicpd, such as
+#                   'c:/path/to/file/'.
+
+# location of top music directory which Musicpd would discover music..
+music_directory  	"~/music/"
+
+#
+playlist_directory		"~/.mpd/playlists"
+db_file			          "~/.mpd/database"
+log_file			        "~/.mpd/log"
+pid_file			        "~/.mpd/pid"
+state_file			      "~/.mpd/state"
+sticker_file			    "~/.mpd/sticker.sql"
+user				          "ryker"
+group				          "ryker"
+port				          "6600"
+filesystem_charset  	"UTF-8"
+id3v1_encoding  		  "GBK"
+# Input #######################################################################
+#
+input {
+        plugin "curl"
+#       proxy "proxy.isp.com:8080"
+#       proxy_user "user"
+#       proxy_password "password"
+}
+
+#
+###############################################################################
+
+# Audio Output ################################################################
+
+
+
+
+#
+###############################################################################
+
