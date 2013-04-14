@@ -1,7 +1,10 @@
 !-*-{Xft settings
-Xft.dpi:  	96
-Xft.antialias:	True
-Xft.hinting:	Full
+Xft.antialias:  1
+Xft.autohint:   0  
+Xft.dpi:        96  
+Xft.hinting:    1  
+Xft.hintstyle:  hintfull  
+Xft.lcdfilter:  lcddefault  
 Xft.rgba:       rgb
 !-*-}
 !-*-{字体设置
@@ -28,7 +31,7 @@ URxvt.internalBorder:           1
 URxvt.saveLines:                8192
 URxvt.borderLess:               True
 URxvt.cursorBlink:              False
-URxvt.perl-ext-common:          default,matcher,url-select,keyboard-select
+URxvt.perl-ext-common:          default,matcher
 URxvt.matcher.button:           1
 URxtt.transparent:              True
 URxvt.shading:                  80
@@ -38,11 +41,7 @@ URxvt.urlLauncher:              chromium
 URxvt.borderColor:              #CCCCCC
 URxvt.thickness:                0
 URxvt.inheritPixmap:            False
-
 !-*-}
-URxvt.keysym.M-u:               perl:url-select:select_next
-URxvt.keysym.M-Escape:          perl:keyboard-select:activate
-tRxvt.keysym.M-s:               perl:keyboard-select:search
 
 !-*-{颜色设置
 URxvt.foreground:  	white
